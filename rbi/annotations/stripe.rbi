@@ -135,6 +135,14 @@ class Stripe::Card < Stripe::APIResource
   # @method_missing: from StripeObject
   sig { params(other: String).returns(String) }
   def last4=(other); end
+
+  # @method_missing: from StripeObject
+  sig { returns(String) }
+  def fingerprint; end
+
+  # @method_missing: from StripeObject
+  sig { params(other: String).returns(String) }
+  def fingerprint=; end
 end
 
 class Stripe::Charge < Stripe::APIResource
